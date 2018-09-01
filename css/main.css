@@ -1,0 +1,275 @@
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons|Roboto';
+body {
+  background: #fff;
+  font-family: 'Roboto Light';
+}
+
+#light-bulb1 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transition: opacity 0.5s;
+}
+#light-bulb1 .bulb {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../src/lightbulb.png);
+}
+#light-bulb1 .bulb.off {
+  background-position-x: -150px;
+}
+#light-bulb1 .bulb.on {
+  background-position-x: 0;
+}
+#light-bulb1.off .bulb.on {
+  opacity: 0;
+}
+#light-bulb1.off .bulb.off {
+  opacity: 1;
+}
+#light-bulb1.on .bulb.on {
+  opacity: 1;
+}
+#light-bulb1.on .bulb.off {
+  opacity: 0;
+}
+
+#light-bulb2 {
+  position: relative;
+  margin: -150px 0px 0px 250px;
+  width: 150px;
+  height: 150px;
+  transition: opacity 0.5s;
+}
+#light-bulb2 .bulb {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../src/lightbulb.png);
+}
+#light-bulb2 .bulb.off {
+  background-position-x: -150px;
+}
+#light-bulb2 .bulb.on {
+  background-position-x: 0;
+}
+#light-bulb2.off .bulb.on {
+  opacity: 0;
+}
+#light-bulb2.off .bulb.off {
+  opacity: 1;
+}
+#light-bulb2.on .bulb.on {
+  opacity: 1;
+}
+#light-bulb2.on .bulb.off {
+  opacity: 0;
+}
+
+#light-bulb3 {
+  position: relative;
+  margin: -150px 0px 0px 500px;
+  width: 150px;
+  height: 150px;
+  transition: opacity 0.5s;
+}
+#light-bulb3 .bulb {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../src/lightbulb.png);
+}
+#light-bulb3 .bulb.off {
+  background-position-x: -150px;
+}
+#light-bulb3 .bulb.on {
+  background-position-x: 0;
+}
+#light-bulb3.off .bulb.on {
+  opacity: 0;
+}
+#light-bulb3.off .bulb.off {
+  opacity: 1;
+}
+#light-bulb3.on .bulb.on {
+  opacity: 1;
+}
+#light-bulb3.on .bulb.off {
+  opacity: 0;
+}
+
+#light-bulb4 {
+  position: relative;
+  margin: -150px 0px 0px 750px;
+  width: 150px;
+  height: 150px;
+  transition: opacity 0.5s;
+}
+#light-bulb4 .bulb {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../src/lightbulb.png);
+}
+#light-bulb4 .bulb.off {
+  background-position-x: -150px;
+}
+#light-bulb4 .bulb.on {
+  background-position-x: 0;
+}
+#light-bulb4.off .bulb.on {
+  opacity: 0;
+}
+#light-bulb4.off .bulb.off {
+  opacity: 1;
+}
+#light-bulb4.on .bulb.on {
+  opacity: 1;
+}
+#light-bulb4.on .bulb.off {
+  opacity: 0;
+}
+.light {
+  color: #fff;
+}
+#result, #demo, .titleLang {
+  color: #fff;
+}
+.titleLang {
+  font-weight: bold;
+}
+
+.recorder_wrapper {
+
+    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.recorder {
+  text-align:center;
+    display: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.record_btn {
+    width: 100px;
+    height: 100px;
+    font-family: 'Material Icons';
+    font-size: 48px;
+    color: #e74c3c;
+    background: none;
+    border: 2px solid #e74c3c;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.15s linear;
+}
+
+.record_btn:hover {
+    transition: 0.15s linear;
+    transform: scale( 1.05 );
+}
+
+.record_btn:active {
+    background: #f5f5f5;
+}
+
+.record_btn:after {
+    content: '\E029';
+}
+
+.record_btn[disabled] {
+    border: 2px solid #ccc;
+}
+
+.record_btn[disabled]:after {
+    content: '\E02B';
+    color: #ccc;
+}
+
+.record_btn[disabled]:hover {
+    transition: 0.15s linear;
+    transform: none;
+}
+
+.record_btn[disabled]:active {
+    background: none;
+}
+
+.recording {
+    animation: recording 2s infinite ease-in-out;
+    position: relative;
+}
+
+.recording:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+    border-radius: 50%;
+    background: rgba( 0, 0, 0, 0.05 );
+    animation: recording_before 2s infinite ease-in-out;
+}
+
+@keyframes recording {
+    from {
+        transform: scale( 1.1 );
+    }
+
+    50% {
+        transform: none;
+    }
+
+    to {
+        transform: scale( 1.1 );
+    }
+}
+
+@keyframes recording_before {
+    80% {
+        width: 200px;
+        height: 200px;
+        margin: -100px;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.record_canvas {
+    width: 60px;
+    height: 100px;
+    display: inline-block;
+    
+}
+
+.txt_btn {
+    color: #000;
+    text-decoration: none;
+    transition: 0.15s linear;
+    animation: text_btn 0.3s ease-in-out;
+}
+
+.languages {
+  text-align:center;
+}

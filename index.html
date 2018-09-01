@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>KeyBoard Team - SmartHouse Project</title>
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+    </head>
+    <body>
+        <div style="text-align:center;margin-left: 268px;">
+        <div id="light-bulb1" class="off" >
+            <span class="bulb off"></span>
+            <span class="bulb on"></span>
+            <span class="light">Đèn 1</span>
+        </div>
+        <div id="light-bulb2" class="off" >
+            <span class="bulb off"></span>
+            <span class="bulb on"></span>
+            <span class="light">Đèn 2</span>
+        </div>
+        <div id="light-bulb3" class="off" >
+            <span class="bulb off"></span>
+            <span class="bulb on"></span>
+            <span class="light">Đèn 3</span>
+        </div>
+        <div id="light-bulb4" class="off">
+            <span class="bulb off"></span>
+            <span class="bulb on"></span>
+            <span class="light">Đèn 4</span>
+        </div>    
+        </div>
+        <p id="demo"></p>
+        <div id="result">
+            
+        </div>
+        <div class="recorder">
+            <button class="record_btn" id="button"></button>
+            <p id="msg_box">Click to action</p>
+        </div>
+        <br>
+        <div class="languages">
+            <span>Languages:</span>
+            <select id="languagesbox">
+                <option checked value="vi">Vietnamese</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <script src="./js/jquery-3.3.1.min.js"></script>
+        <script src="./js/rs.speech.js"></script>
+        <script type="text/javascript" src="data.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

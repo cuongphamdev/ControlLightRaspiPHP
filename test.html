@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<div id="result">
+		</div>
+		<button id="speak">Start record</button>
+
+
+		<script src="./js/jquery-3.3.1.min.js"></script>
+		<script src="./js/rs.speech.js"></script>
+		<script type="text/javascript" src="data.js"></script>
+		<script type="text/javascript" charset="utf-8" async defer>
+			var div = document.getElementById("result");
+			// var speechs = ["No", "Yes"];
+			var funcs = [];
+			document.getElementById("speak").onclick = function(){
+				receive();
+			}
+
+		function receive() {
+			speechRs.rec_start('vi',function(final_transcript,interim_transcript){
+			div.innerText = final_transcript+interim_transcript;
+			});
+			
+			for (i = 0; i < data.length; i++) {
+				funcs[i] = excute(data[i]);
+			}
+			for (j = 0; j < data.length; j++) {
+   	 			funcs[j]();
+			}
+		}
+		function excute(speech) {
+   			return function() {
+		        speechRs.on(speech.turnOn,function(){
+		        	console.log ("Say: " +speech.turnOn);
+		        });
+		        speechRs.on(speech.turnOff,function(){
+		        	console.log ("Say: " +speech.turnOff);
+		        });
+    		}
+		}
+		</script>
+	</body>
+</html>
